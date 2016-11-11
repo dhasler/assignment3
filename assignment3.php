@@ -16,13 +16,28 @@ $ext = new ChildClass($thestuff);
 	<link rel="stylesheet" href="assignment3.css">
 </head>
 <body>
-	<?php
-	  echo $words.'<br />';
-		echo $words->scrambler().'<br />';
-		echo $words2.'<br />';
-		echo $words2->scrambler().'<br />';
-		echo $ext.'<br />';
-		echo $ext->scrambler().'<br />';
-	?>
+	<div id="main">
+		<h1>My Parent Classes and the Child!</h1>
+		<section id="first">
+		<?php
+			echo $words.'<br />';
+			echo $words->scrambler().'<br />';
+		?>
+		</section>
+
+		<section id="two">
+		<?php
+			echo $words2.'<br />';
+			echo $words2->scrambler().'<br />';
+		?>
+		</section>
+
+		<section id="third">
+		<?php
+			echo $ext.'<br />';
+			echo $ext->scrambler().'<br />';
+		?>
+		</section>
+	</div>
 </body>
 </html>

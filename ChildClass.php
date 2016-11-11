@@ -3,7 +3,8 @@
 
 		public $_len,
 					 $_type,
-					 $_size;
+					 $_size,
+					 $_objClone;
 
 		public function __construct($stuffs = array()){
 			parent::__construct($stuffs);
@@ -21,9 +22,11 @@
 			}
 		}
 
+		public function __clone(){
+			$this->_objClone = clone $this;
+		}
+
 		public function __toString(){
 			return "The parent data has the following attributes: <br /> Data Type: ".$this->_type."<br /> Data Length: ".$this->_len."<br /> Data Size: ".$this->_size." bits (est)";
 		}
-
-
 	}
